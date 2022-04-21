@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import InputField from './components/InputField';
+import FooterField from './components/FooterField';
+import {Task} from './model';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
+  const [task, setTask] = useState<string>('');
+  const [tasks, setTasks] = useState<Task[]>([]);
+
+  const handleAddTasks = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (task) {
+      setTasks([...tasks, {id: Date.now(), task, isDone: false}]);
+      setTask('');
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <span className='TittleFor'>TaskyForTypescript</span>
+      <p className='ParrButton'>TAKE NOTES</p>
+      <InputField task={task} setTask={setTask} handleAddTasks={handleAddTasks}/>
+      <div className='ListTasks'> {
+          tasks.map((tsk) => (
+            <li>{tsk.task}</li>
+          ))
+        }
+      </div>
+      <FooterField 
+        question='Want more about this App?'
+        message='Explore more spotlights, or subscribe to receive daily or weekly doses of this App in your inbox.'
+      />
     </div>
   );
-}
+};
 
 export default App;
