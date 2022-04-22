@@ -69,3 +69,10 @@
   margin-left: 40px;
   margin-top: 20px;
 }
+
+.CardTask {
+  border: 1px solid;
+  font-family: 'Bebas Neue', cursive;
+  display: flex;
+  order: 1;
+} 
