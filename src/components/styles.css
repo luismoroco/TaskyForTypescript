@@ -7,8 +7,10 @@
 
 .input {
   display: flex;
+  width: 50%;
   align-items: center;
   flex-direction: row;
+  justify-content: center;
 }
 
 .inputBox {
@@ -71,8 +73,17 @@
 }
 
 .CardTask {
-  border: 1px solid;
-  font-family: 'Bebas Neue', cursive;
+  border: 2px solid black;
+  font-family: Messine-Font;
   display: flex;
-  order: 1;
+  flex-direction: column;
+  color: #0c5e9c;
+  padding: 3px;
+  box-shadow: -5px -4px rgb(28, 110, 66);
 } 
+
+.CardSubBox {
+  font-size: 25px;
+  color: black;
+  font-family: 'Bebas Neue', cursive;
+}

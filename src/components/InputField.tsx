@@ -21,6 +21,9 @@ const InputField: React.FC<Props> = ({task, setTask, handleAddTasks}) => {
       <button className='inputSubmit'
         type='submit'
       >Save Task</button>
+      <input className='inputBox'
+        type='date'
+      />
     </form>
   );
 };

@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(253, 249, 244);
+  background-color: rgb(230, 223, 214);
 }
 
 .TittleFor {
@@ -54,8 +54,7 @@ p:hover {
 
 .ListTasks {
   display: flex;
-  flex-direction: row;
-  border: 1px solid;
+  flex-direction: column;
   width: 70%;
   height: 100%;
   flex-wrap: wrap;

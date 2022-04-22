@@ -5,8 +5,10 @@ const CardTask: React.FC<Task> = ({id, task, isDone}) => {
   return (
     <div className='CardTask'>
       {id}
-      {task}
-      {isDone}
+      <div className='CardSubBox'>
+        {task}
+        {isDone}
+      </div>
     </div>
   );
 };
